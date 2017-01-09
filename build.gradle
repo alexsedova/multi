@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'de.gliderpilot.gradle.semantic-release:gradle-semantic-release-plugin:1.2.0'
+        classpath 'org.ajoberstar:gradle-git:1.5.1'
+    }
+}
+
+allprojects{
+    apply plugin: 'java'
+}
+
+subprojects{
+    apply plugin: 'de.gliderpilot.semantic-release'
+}
